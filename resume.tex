@@ -52,8 +52,8 @@
 %	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
-% \photo{./examples/profile.png}
-\name{Claud D.}{Park}
+% \photo[rectangle,edge,right]{./examples/profile}
+\name{}{Alex Kopen}
 \position{Software Architect{\enskip\cdotp\enskip}Security Expert}
 \address{42-8, Bangbae-ro 15-gil, Seocho-gu, Seoul, 00681, Rep. of KOREA}
 
@@ -75,19 +75,21 @@
 
 \quote{``Be the change that you want to see in the world."}
 
-
+\makeatletter
+\def\@sectioncolor{\color{awesome}}
+\makeatother
 %-------------------------------------------------------------------------------
 \begin{document}
 
 % Print the header with above personal informations
 % Give optional argument to change alignment(C: center, L: left, R: right)
-\makecvheader
+  \makecvheader[C]
 
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
-\makecvfooter
+  \makecvfooter
   {\today}
-  {Claud D. Park~~~·~~~Curriculum Vitae}
+  {Byungjin Park~~~·~~~Résumé}
   {\thepage}
 
 
@@ -95,14 +97,14 @@
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
-\input{cv/education.tex}
-\input{cv/skills.tex}
-\input{cv/experience.tex}
-\input{cv/extracurricular.tex}
-\input{cv/honors.tex}
-\input{cv/presentation.tex}
-\input{cv/writing.tex}
-\input{cv/committees.tex}
+  \input{resume/summary.tex}
+  \input{resume/experience.tex}
+  \input{resume/honors.tex}
+  \input{resume/presentation.tex}
+  \input{resume/writing.tex}
+  \input{resume/committees.tex}
+  \input{resume/education.tex}
+  \input{resume/extracurricular.tex}
 
 
 %-------------------------------------------------------------------------------
